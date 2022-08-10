@@ -1,0 +1,117 @@
+.features {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 318px;
+  background-color: @bg-features;
+  border-radius: 5%;
+
+  &::before {
+    position: absolute;
+    z-index: 2;
+    content: "";
+    display: block;
+    width: 68px;
+    height: 68px;
+    top: -20px;
+    right: -10px;
+    background-image: url("../../img/icons/decor.png");
+    background-repeat: no-repeat;
+
+    @media (min-width: @desktop-width) {
+      width: 219px;
+      height: 219px;
+      top: -60px;
+      right: -100px;
+      background-image: url("../../img/icons/decor-desktop.png");
+    }
+  }
+}
+
+.features__list {
+  .clear-list();
+}
+
+.features__inner {
+  .container();
+
+  width: 100%;
+  padding-top: 30px;
+}
+
+.features__item {
+  .font(@font-family: @font-family-normal, @font-weight: 800, @font-size: 20px, @line-height: 25px);
+
+  position: relative;
+  margin-left: 20%;
+  padding-bottom: 30px;
+  color: @rgba-chocolate;
+
+  @media (min-width: @desktop-width) {
+    width: 270px;
+  }
+
+  &--before {
+    &::before {
+      position: absolute;
+      z-index: 3;
+      content: "";
+      text-align: center;
+      padding-top: 10px;
+      counter-increment: section+1;
+      display: block;
+      width: 47px;
+      height: 47px;
+      top: 0;
+      right: 105%;
+      border-radius: 50%;
+      background-color: @orange;
+      box-shadow: 0 0 9px @orange-light;
+    }
+  }
+
+  &--before1 {
+    &::before {
+      content: "01";
+    }
+  }
+
+  &--before2 {
+    &::before {
+      content: "02";
+    }
+  }
+
+  &--before3 {
+    &::before {
+      content: "03";
+    }
+  }
+
+  &--after {
+    &::after {
+      position: absolute;
+      z-index: 3;
+      content: "";
+      display: block;
+      width: 30px;
+      height: 20px;
+      top: -4px;
+      left: -72px;
+      background-image: url("../../img/icons/elipse.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.features__text {
+  .font(@font-family: @font-family-normal, @line-height: 20.8px);
+
+  color: @basic-white;
+  margin: 0;
+
+  &--colored {
+    color: @orange;
+  }
+}

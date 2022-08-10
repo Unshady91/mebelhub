@@ -1,0 +1,46 @@
+
+.banner__features {
+  order: 4;
+  padding: 0;
+
+  @media (min-width: @middle-width) {
+    width: 50%;
+  }
+}
+
+.banner {
+  order: 3;
+  margin-bottom: 40px;
+
+  @media (min-width: @middle-width) {
+    display: flex;
+  }
+}
+
+.banner__promo {
+  width: 100%;
+
+  @media (min-width: @middle-width) {
+    width: 50%;
+  }
+}
+
+.banner__text {
+  &:extend(.page-nav__text);
+
+  @media (min-width: @middle-width) {
+    width: 100%;
+    padding: 30px 20px 20px 0;
+    margin: 0;
+  }
+
+  &--heading {
+    .font(@font-family: @font-family-bold, @font-weight: 800, @font-size: 36px, @line-height: 39px);
+  }
+}
+
+.banner__quote {
+  &--colored {
+    color: @orange;
+  }
+}

@@ -1,0 +1,116 @@
+.font-face(@font-family, @file-path, @font-weight, @font-style) {
+  @font-face {
+    font-family: @font-family;
+    src: url("@{file-path}.woff2") format("woff2"),
+      url("@{file-path}.woff") format("woff");
+    font-weight: @font-weight;
+    font-style: @font-style;
+  }
+}
+
+.font(
+  @font-family: @base-f-family,
+  @font-size: @base-f-size,
+  @font-weight: @base-f-weight,
+  @font-style: @base-f-style,
+  @line-height: @base-l-height) {
+  font-family: @font-family;
+  font-size: @font-size;
+  font-weight: @font-weight;
+  font-style: @font-style;
+  line-height: @line-height;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container(@width: @min-width, @padding: @min-padding) {
+  width: @width;
+  padding: 0 @padding;
+  margin: 0 auto;
+}
+
+.reset-container() {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.link-decoration {
+  text-decoration: none;
+}
+
+.clear-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.f-block-position(@min-size: 256px) {
+  height: minmax(@min-size, 100%);
+}
+
+.f-block-wrapper(@padding: 30px) {
+  padding: @padding;
+}
+
+.link(
+  @color-bg: @bg-link,
+  @color: @basic-white,
+  @hover-bg: @link-hover-bg,
+  @hover: @link-hover,
+  @active-bg: @link-active-bg,
+  @active: @link-active,
+  ) {
+  background-color: @color-bg;
+  color: @color;
+  text-align: center;
+
+  &:hover {
+    background-color: @hover-bg;
+    color: @hover;
+  }
+
+  &:active {
+    background-color: @active-bg;
+    color: @active;
+  }
+}
+
+.link-tablet() {
+  background-color: @basic-white;
+  color: @basic-black;
+
+  &:hover {
+    background-color: @basic-white;
+    color: @marine;
+  }
+
+  &:active {
+    background-color: @basic-white;
+    color: @rgba-black-active;
+  }
+}
+
+.current-link() {
+  background-color: @basic-white;
+  color: @current-link;
+
+  &:hover {
+    color: @current-link-hover;
+  }
+
+  &:active {
+    color: @rgba-current-link-active;
+  }
+}

@@ -1,0 +1,21 @@
+.menu-button {
+  position: relative;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  font-size: 0;
+
+  &::before {
+    position: absolute;
+    z-index: 3;
+    content: "";
+    display: block;
+    width: 34px;
+    height: 5px;
+    top: 0;
+    left: 0;
+    background-color: @basic-white;
+    box-shadow: 12px 12px 0 @basic-white;
+  }
+}

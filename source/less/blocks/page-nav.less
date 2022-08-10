@@ -1,0 +1,118 @@
+.page-nav {
+  .container();
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  width: 100%;
+  min-height: 948px;
+  padding-top: 30px;
+  background-color: @bg-base-color;
+  background-image: linear-gradient(180deg, @gradient-first, @gradient-second 100%), url("../../img/nav-bg.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left 65% top 45%;
+  overflow: hidden;
+
+  @media (min-width: @pre-desktop-width) {
+    .container(@width: @pre-desktop-width, @padding: @tablet-padding);
+
+    padding-top: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .container(@width: @desktop-width, @padding: @desktop-padding);
+
+    padding-top: 45px;
+  }
+}
+
+.page-nav__contact-number {
+  display: none;
+
+  @media (min-width: @pre-desktop-width) {
+    position: relative;
+    display: block;
+    order: 3;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: 3;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    top: -5px;
+    left: -35px;
+    background-image: url("../../img/icons/phone.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.page-nav__page-logo {
+  z-index: 3;
+  display: block;
+  width: 181px;
+  order: 1;
+  height: 144px;
+}
+
+.page-nav__logo-image {
+  width: 181px;
+  height: 61px;
+  margin-top: -15px;
+}
+
+.page-nav__menu-button {
+  order: 2;
+  width: 34px;
+  height: 34px;
+
+  @media (min-width: @middle-width) {
+    display: none;
+  }
+}
+
+.page-nav__text {
+  .font(@font-family: @font-family-normal, @line-height: 130%);
+
+  display: block;
+  margin: 0;
+  padding-bottom: 20px;
+  color: @basic-white;
+
+  &--heading {
+    .font(@font-family: @font-family-bold, @font-weight: 800, @font-size: 36px, @line-height: 39px);
+  }
+
+  @media (min-width: @middle-width) {
+    width: 30%;
+    margin: 0;
+    margin-top: 25px;
+  }
+}
+
+.page-nav__quote {
+  &--colored {
+    color: @orange;
+  }
+}
+
+.page-nav__tel {
+  .font(
+    @font-family: @font-family-normal,
+    @font-size: 20px,
+    @font-weight: 700,
+  );
+
+  background-color: transparent;
+  border: none;
+  width: 185px;
+
+  &::placeholder {
+    color: @basic-white;
+    text-align: right;
+  }
+}

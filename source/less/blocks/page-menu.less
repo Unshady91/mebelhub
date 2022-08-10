@@ -1,0 +1,37 @@
+.page-menu {
+  display: none;
+
+  @media (min-width: @middle-width) {
+    .clear-list();
+    .font(@font-family: @font-family-normal, @line-height: 130%);
+
+    display: flex;
+    order: 2;
+  }
+
+  @media (min-width: @pre-desktop-width) {
+    order: 3;
+  }
+}
+
+.page-menu__link {
+  .link(
+    @color-bg: unset,
+    @color: @link,
+    @hover-bg: unset,
+    @hover: @orange,
+    @active-bg: unset,
+    @active: @rgba-chocolate,
+  );
+
+  padding: 20px 10px;
+
+  @media (min-width: @tablet-width) {
+    padding: 20px 20px;
+  }
+
+  &--current {
+    color: @orange;
+    border-bottom: 2px solid @orange;
+  }
+}
